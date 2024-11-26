@@ -1,48 +1,118 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* vermelho */
 header {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 10rem;
-    background-color: rgba(255, 0, 212, 0.747);
-    border: 10px solid white;
+    width: 100%;
 }
 
-.left {
-    background-color: aqua;
+.section-header {
+    background-color: rgba(255, 115, 162, 0.514);
+    height: 15vh;
+    width: 100%;
+}
+
+.container-middle {
     display: flex;
-    width: 25vw;
-    height: 40rem;
+    flex-direction: row;
 }
 
-main {
-    background-color: aquamarine;
-    display: flex;
-    width: 25vw;
-    height: 40rem;
-    
-}
-.right {
-    background-color: blueviolet;
-    display: flex;
-    width: 25vw;
-    height: 80vh;
+/* amarelo  */
+.article-left {
+    background-color: rgba(255, 255, 88, 0.856);
+    height: 70vh;
+    width: 25%;
+    order: 1;
 }
 
+/* branco */
+.article-middle {
+    height: 70vh;
+    width: 50%;
+    order: 2;
+}
 
+/* verde */
+.article-right {
+    background-color: rgba(199, 255, 115, 0.774);
+    height: 70vh;
+    width: 25%;
+    order: 3;
+}
+
+/* azul */
 footer {
     display: flex;
-justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 10rem;
-    background-color: rgba(255, 157, 239, 0.747);
-    border: 10px solid white;
+    width: 100%;
 }
 
+.section-footer {
+    background-color: rgba(85, 164, 255, 0.842);
+    height: 15vh;
+    width: 100%;
+}
+
+/* responsividade em mobile */
+@media (max-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-middle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-header {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-middle {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+
+    .article-left {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+    }
+
+    .article-right {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 3;
+    }
+
+    .section-footer {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
